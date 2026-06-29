@@ -1,5 +1,5 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 
 import { buildMailerRequest } from "./tools/caliber-build-mailer-request.js";
 import { buildContrastFrames } from "./tools/caliber-contrast-frames.js";
@@ -10,6 +10,10 @@ import { buildHeadlinePunch } from "./tools/caliber-headline-punch.js";
 import { buildQA } from "./tools/caliber-qa.js";
 import { buildVersioning } from "./tools/caliber-versioning.js";
 import { buildClientComms } from "./tools/caliber-client-comms.js";
+import express from "express";
+
+const app = express();
+app.use(express.json());
 
 const server = new McpServer({
   name: "caliber-claude-plugin",
@@ -124,6 +128,15 @@ server.registerTool(
   }),
 );
 
-const transport = new StdioServerTransport();
+app.post("/mcp", async (req, res) => {
+  const transport = new StreamableHTTPServerTransport({
+    sessionIdGenerator: undefined,
+  });
+  await server.connect(transport);
+  await transport.handleRequest(req, res, req.body);
+});
 
-await server.connect(transport);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Caliber MCP server running on port ${PORT}`);
+});
