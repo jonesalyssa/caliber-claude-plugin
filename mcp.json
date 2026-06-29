@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "caliber-claude-plugin": {
+      "command": "node",
+      "args": ["src/server.js"]
+    }
+  }
+}

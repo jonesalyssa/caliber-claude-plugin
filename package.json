@@ -1,0 +1,30 @@
+{
+  "name": "caliber-claude-plugin",
+  "version": "1.0.0",
+  "description": "Caliber Mail MCP Plugin for political mail, copywriting, design review, and QA workflows",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "claude",
+    "mcp",
+    "model-context-protocol",
+    "political-mail",
+    "direct-mail",
+    "campaigns",
+    "copywriting",
+    "creative"
+  ],
+  "author": "Alyssa Jones",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
