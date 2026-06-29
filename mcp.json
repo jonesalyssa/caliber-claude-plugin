@@ -1,8 +1,10 @@
+cat > mcp.json << 'EOF'
 {
   "mcpServers": {
-    "caliber-claude-plugin": {
-      "command": "node",
-      "args": ["src/server.js"]
+    "caliber-claude": {
+      "url": "https://caliber-claude-plugin-production.up.railway.app/mcp",
+      "type": "url"
     }
   }
 }
+EOF
