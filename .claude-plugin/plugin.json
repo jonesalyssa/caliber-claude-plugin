@@ -1,5 +1,12 @@
 {
   "name": "caliber-claude",
   "version": "1.0.0",
-  "description": "Caliber Contact creative tools for political direct mail"
+  "description": "Caliber Contact creative tools for political direct mail",
+  "mcp_servers": [
+    {
+      "name": "caliber-claude",
+      "url": "https://caliber-claude-plugin-production.up.railway.app/mcp",
+      "type": "url"
+    }
+  ]
 }

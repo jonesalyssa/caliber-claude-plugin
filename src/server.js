@@ -128,6 +128,10 @@ server.registerTool(
   }),
 );
 
+app.get("/mcp", (req, res) => {
+  res.json({ name: "caliber-claude", version: "1.0.0" });
+});
+
 app.post("/mcp", async (req, res) => {
   const transport = new StreamableHTTPServerTransport({
     sessionIdGenerator: undefined,
