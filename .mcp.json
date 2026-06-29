@@ -1,10 +1,8 @@
-cat > mcp.json << 'EOF'
 {
   "mcpServers": {
     "caliber-claude": {
       "url": "https://caliber-claude-plugin-production.up.railway.app/mcp",
-      "type": "url"
+      "type": "http"
     }
   }
 }
-EOF
