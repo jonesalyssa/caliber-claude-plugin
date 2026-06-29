@@ -524,3 +524,188 @@ The design is readable.
 The concept is persuasive.
 
 Everything else is secondary.
+
+# Production QA
+
+Review all technical requirements before sending to print.
+
+---
+
+## Document Setup
+
+### Bleed
+
+All backgrounds, photos, and color fills that touch the edge must extend **0.125" beyond trim** on all sides.
+
+No accidental white edges.
+
+If it bleeds, it needs 0.125".
+
+### Safety Margin
+
+Keep all critical content — text, logos, faces, QR codes, disclaimers — **at least 0.125" inside trim**.
+
+Preferred: 0.1875" (3/16") inside trim for body copy and headlines.
+
+Nothing important within 0.125" of any edge.
+
+### Fold Lines (self-mailers)
+
+No text, face, or logo should cross a fold line.
+
+Confirm fold placement matches the printer's spec for that piece size.
+
+Allow at least 0.125" clearance on each side of every fold.
+
+---
+
+## Format Specs by Size
+
+| Size     | Trim           | With Bleed         | Common Use                   |
+| -------- | -------------- | ------------------ | ---------------------------- |
+| 4.25 x 6 | 4.25" x 6"     | 4.5" x 6.25"       | Standard postcard            |
+| 6 x 9    | 6" x 9"        | 6.25" x 9.25"      | Standard postcard            |
+| 6 x 11   | 6" x 11"       | 6.25" x 11.25"     | Large postcard / self-mailer |
+| 8.5 x 11 | 8.5" x 11"     | 8.75" x 11.25"     | Full-page / letter           |
+| EDDM     | 6.25" x 9" min | + 0.125" all sides | Every Door Direct Mail       |
+
+EDDM minimum: 6.25" x 9". Maximum: 12" x 15". One dimension must exceed 10.5".
+
+---
+
+## USPS Compliance
+
+### Indicia Placement
+
+Standard mail indicia: **top right corner of mailing panel**.
+
+Minimum clear area around indicia: 0.25" on all sides.
+
+No text, image, or color behind the indicia box.
+
+### Mailing Label / IMb Barcode
+
+Place in the **address block area**, lower right of mailing panel.
+
+Minimum clear zone below address block: 0.625" from bottom edge (USPS optical character reader zone).
+
+No ink, texture, or photo in the barcode clear zone.
+
+### Return Address
+
+Upper left of mailing panel.
+
+Required on all standard and nonprofit mail.
+
+### EDDM-Specific
+
+Must include "ECRWSS EDDM" in place of a specific address.
+
+Retail EDDM: indicia reads "US POSTAGE PAID / EDDM RETAIL".
+
+Bundling tabs required at printer — confirm with production.
+
+### Tab/Wafer Seal Requirements (self-mailers)
+
+USPS requires self-mailers to be tabbed or glued closed on the open edge.
+
+Standard: 1–2 wafer seals on the open side, positioned per USPS DMM guidelines.
+
+Confirm tab placement with printer before finalizing layout — seal placement affects design near edges.
+
+---
+
+## Disclaimer / Legal Requirements
+
+### "Paid For By" Statement
+
+**Required on every piece.**
+
+Must include the full committee name as registered with the relevant authority (FEC, state, or local).
+
+Example: _Paid for by Citizens for Jane Smith_
+
+### Placement
+
+Bottom of mailing panel, or bottom of primary face panel.
+
+Never bury in a color field that reduces legibility.
+
+### Size
+
+Minimum **7pt** for most state requirements.
+
+FEC: no mandated size, but must be "clear and conspicuous."
+
+When in doubt: **8pt minimum**, high-contrast, readable.
+
+### Disclaimer for Attack Mail
+
+If the piece attacks an opponent, confirm whether state law requires additional disclosure language.
+
+Some states require: _"[Candidate] did not approve this message"_ or equivalent.
+
+Check state-specific requirements for every race.
+
+---
+
+## Color
+
+### File Mode
+
+All print files must be submitted in **CMYK**.
+
+RGB files will shift at press — blues go purple, reds go muddy.
+
+Convert to CMYK before final export. Check for color shift after conversion.
+
+### Rich Black
+
+For large black areas, use rich black: **C60 M40 Y40 K100**.
+
+Do not use rich black on small text — causes registration blur.
+
+Small black text: **K100 only**.
+
+### Saturated Colors
+
+Bright reds, blues, and greens shift darker in print.
+
+Proof on a calibrated monitor or request a press proof for hero colors.
+
+Total ink coverage should not exceed **300% CMYK** (some printers: 280%).
+
+### Coating
+
+Gloss coating: intensifies color, reduces readability on small text.
+
+Matte/silk: softer, easier to read, less pop on photos.
+
+Confirm coating choice with account manager before file prep — coating affects color build.
+
+---
+
+## Resolution
+
+Images: **300 DPI minimum at final print size**.
+
+Logos: submit as vector (`.ai`, `.eps`, `.pdf`) whenever possible.
+
+Never scale a raster image above 100% of its original size.
+
+Avoid screenshots, web-pulled images, and social media exports — these are 72–96 DPI and will not print cleanly.
+
+---
+
+## File Submission
+
+Submit as **press-ready PDF** with:
+
+- Bleed included
+- Crop marks (offset 0.125")
+- All fonts embedded or outlined
+- CMYK color mode
+- No spot colors unless confirmed with printer
+- Layers flattened
+
+Confirm file specs with printer before first submission on any new format.
